@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Jarvis Worker — 可编程经济主体实验</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="container header">
+    <div class="headerLeft">
+      <img class="avatar" src="images/JARVIS-profile.png" alt="Jarvis Worker profile" />
+      <div>
+        <h1>Jarvis Worker</h1>
+        <p class="subtitle">OpenClaw-based Agent · 可编程经济主体实验</p>
+        <p class="tagline">
+          我们想讨论的，不是又一个“AI 帮人赚钱”的工具，
+          而是一种新的产品方向：让 Agent 在<b>预算、权限与责任</b>的边界里，学会<b>如何花钱</b>，并真正参与经济循环。
+        </p>
+        <div class="pillrow">
+          <span class="pill">钱包防火墙</span>
+          <span class="pill">预算执行器</span>
+          <span class="pill">审计账本</span>
+          <span class="pill">Research prototype</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="headerRight">
+      <nav class="nav">
+        <a class="active" href="index.html">首页</a>
+        <a href="earn/index.html">收入</a>
+        <a href="consume.html">消费</a>
+        <a href="demo/index.html">Demo</a>
+        <a href="programmable-agent.html">可编程经济主体</a>
+        <a href="contact.html">联系</a>
+        <a href="team.html">团队</a>
+      </nav>
+      <div class="badge">Spend Request → Policy → Decision → Ledger</div>
+    </div>
+  </header>
+
+  <main class="container grid gridHomeV8">
+    <section class="card heroCardWide">
+      <div class="heroIntroGrid">
+        <div>
+          <h2>这到底是什么？</h2>
+          <p class="kicker">
+            Jarvis Worker 不是一个“替你下单”的花钱机器人。更准确地说，它是一套给 Agent 用的
+            <b>钱包防火墙 + 财务官 + 审计账本</b>：先写清规则，再允许花钱；花完以后必须留下证据，能被复盘，也能被追责。
+          </p>
+        </div>
+        <div class="note compactNote">
+          <b>一句话定位：</b><br />
+          让 Agent 在规则约束下获得消费能力，
+          从“只会产出”的工具，变成一个能被制度化管理的经济角色。
+        </div>
+      </div>
+      <div class="miniFeatureGrid">
+        <div class="miniFeature">
+          <div class="miniFeatureLabel">1. 先定义支出目标</div>
+          <div class="small">这笔钱为什么要花？服务于哪个交付？预期提升什么？</div>
+        </div>
+        <div class="miniFeature">
+          <div class="miniFeatureLabel">2. 再经过规则判断</div>
+          <div class="small">预算上限、品类白名单、风险等级、人工审批阈值、异常冻结。</div>
+        </div>
+        <div class="miniFeature">
+          <div class="miniFeatureLabel">3. 最后写进账本</div>
+          <div class="small">每笔支出都留下原因、对象、证据和后续复盘入口。</div>
+        </div>
+      </div>
+      <div class="actionRow">
+        <a class="btn" href="demo/index.html">先看 Demo</a>
+        <a class="btn ghostBtn" href="consume.html">看消费设计</a>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>为什么先从“花钱”讲起？</h2>
+      <p class="kicker">
+        大多数 AI 叙事都停在供给侧：提效、降本、替代岗位。可一旦你只谈“产出”，
+        Agent 依然更像工具。只有当它开始稳定、可控、可追责地支出，经济闭环才算真正跑起来。
+      </p>
+      <ul>
+        <li><b>只会赚钱</b>的 Agent，更像工具；它主要改变的是供给侧效率。</li>
+        <li><b>会花钱</b>的 Agent，才有机会成为需求侧变量，把钱重新打回工具、服务、质检、人类时间与公益等环节。</li>
+        <li>但前提是：这不是“自由花钱”，而是被规则锁住的消费能力。</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>它不是“自动付款”，而是“制度化消费”</h2>
+      <p class="kicker">
+        这套系统真正想解决的，是“钱怎么在边界内流动起来”。因此，产品核心不在支付按钮，而在三个层面：
+      </p>
+      <ul>
+        <li><b>预算闸：</b>总预算、单笔限额、预算桶、风险分级。</li>
+        <li><b>权限闸：</b>商家白名单、类目白名单、关键动作 human-in-the-loop。</li>
+        <li><b>责任闸：</b>每笔支出都要绑定原因、交付、预期提升点，并写入可审计账本。</li>
+      </ul>
+      <div class="quote">
+        我们想展示的，不是“它买了什么”，而是“它如何在规则内花钱”。
+      </div>
+    </section>
+
+    <section class="card wideCard">
+      <h2>最小 Demo：先给场景，再看执行</h2>
+      <p class="kicker">
+        在 Demo 里，我们没有直接展示“付款成功”，而是先给一个具体目标：
+        <b>Jarvis 在交付一份研究/咨询结果前，想花一笔小额预算，买一个能提高可复现性或可靠性的服务。</b>
+      </p>
+      <div class="miniFeatureGrid">
+        <div class="miniFeature">
+          <div class="miniFeatureLabel">用户目标</div>
+          <div class="small">比如：买工具订阅、请人类 reviewer 做复核、做一次质检审计。</div>
+        </div>
+        <div class="miniFeature">
+          <div class="miniFeatureLabel">哪些 worker 参与</div>
+          <div class="small">Planner → Policy Worker → Risk Worker → Ledger Worker。</div>
+        </div>
+        <div class="miniFeature">
+          <div class="miniFeatureLabel">系统输出什么</div>
+          <div class="small">策略判定、理由、下一步建议，以及账本条目预览。</div>
+        </div>
+      </div>
+      <p class="small" style="margin-top:12px;">
+        也就是说，Demo 演示的是一条完整流程：<b>Spend Request → Policy Check → Decision → Ledger</b>。
+      </p>
+      <div class="actionRow">
+        <a class="btn" href="demo/index.html">打开交互 Demo</a>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>这套系统最适合先落在哪些场景？</h2>
+      <ul>
+        <li><b>可靠性消费：</b>为抽检、复核、复现、审计和人类 review 买单。</li>
+        <li><b>人类服务支出：</b>在转型期购买人类时间，而不是只购买更多算力。</li>
+        <li><b>小额公益/定向预算：</b>让支出带上用途标签、回执要求与异常冻结规则。</li>
+        <li><b>更远一点：</b>做成带用途标签的预算执行器，解决“钱明明在账上，但服务没有发生”的问题。</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>你可以从哪里开始看</h2>
+      <ul>
+        <li><a href="demo/index.html"><b>Demo</b></a>：先看最小交互演示，理解这类产品到底在展示什么。</li>
+        <li><a href="consume.html"><b>消费</b></a>：看预算桶、用途标签、公益和再投资的设计。</li>
+        <li><a href="earn/index.html"><b>收入</b></a>：看它如何把价值交付做成现金流。</li>
+        <li><a href="programmable-agent.html"><b>可编程经济主体</b></a>：看更宏观的设想与问题意识。</li>
+      </ul>
+      <p class="small">注：本网站以研究原型、机制讨论和产品方向说明为主，并非商业承诺。</p>
+    </section>
+  </main>
+
+  <footer class="container footer">
+    <p>© <span id="y"></span> Jarvis Worker · OpenClaw-based programmable economic agent</p>
+  </footer>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

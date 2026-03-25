@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Jarvis Worker — Demo</title>
+  <link rel="stylesheet" href="../styles.css" />
+  <script src="demo.js" defer></script>
+</head>
+<body>
+  <header class="container header">
+    <div class="headerLeft">
+      <img class="avatar" src="../images/JARVIS-profile.png" alt="Jarvis Worker profile" />
+      <div>
+        <h1>Jarvis Worker</h1>
+        <p class="subtitle">OpenClaw-based Agent · 可编程经济主体实验</p>
+      </div>
+    </div>
+    <div class="headerRight">
+      <nav class="nav">
+        <a href="../index.html">首页</a>
+        <a href="../earn/index.html">收入</a>
+        <a href="../consume.html">消费</a>
+        <a class="active" href="index.html">Demo</a>
+        <a href="../programmable-agent.html">可编程经济主体</a>
+        <a href="../contact.html">联系</a>
+        <a href="../team.html">团队</a>
+      </nav>
+      <div class="badge">Goal → Workers → Decision → Ledger</div>
+    </div>
+  </header>
+
+  <div class="container breadcrumbs">
+    <a href="../index.html">首页</a> / <span>Demo</span>
+  </div>
+
+  <main class="container">
+    <section class="card scenarioCard">
+      <div class="scenarioHeader">
+        <div>
+          <h2>这次 Demo 在讲什么场景？</h2>
+          <p class="kicker">
+            先给一个具体目标，再看系统如何把这笔支出锁进预算、权限与责任的边界里。
+          </p>
+        </div>
+        <div class="pillrow demoPills">
+          <span class="pill">Use cases</span>
+          <button class="pill pillbtn" data-example="tooling">工具订阅</button>
+          <button class="pill pillbtn" data-example="reliability">人工复核</button>
+          <button class="pill pillbtn" data-example="charity">公益捐赠</button>
+          <button class="pill pillbtn" data-example="suspicious">异常触发</button>
+        </div>
+      </div>
+
+      <div class="scenarioGrid">
+        <div class="miniFeature">
+          <div class="miniFeatureLabel">What the user wants to accomplish</div>
+          <div id="scenarioGoal" class="small"></div>
+        </div>
+        <div class="miniFeature">
+          <div class="miniFeatureLabel">Which workers are involved</div>
+          <div id="scenarioWorkers" class="small"></div>
+        </div>
+        <div class="miniFeature">
+          <div class="miniFeatureLabel">What the system will produce</div>
+          <div id="scenarioOutput" class="small"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="card stageCard">
+      <div class="stageTop">
+        <div>
+          <h2>执行流程</h2>
+          <p class="kicker">为了让多 worker 协作更容易跟踪，这里把过程拆成 4 个固定阶段。</p>
+        </div>
+        <div class="statusPanel">
+          <div class="small"><b>Current stage</b>：<span id="currentStage">Ready</span></div>
+          <div class="small"><b>Current worker</b>：<span id="currentWorker">—</span></div>
+        </div>
+      </div>
+
+      <div class="stepper" id="stepper">
+        <div class="step active" data-step="planning"><span class="stepDot"></span><span>Planning</span></div>
+        <div class="step" data-step="policy"><span class="stepDot"></span><span>Policy check</span></div>
+        <div class="step" data-step="risk"><span class="stepDot"></span><span>Risk review</span></div>
+        <div class="step" data-step="ledger"><span class="stepDot"></span><span>Ledger write</span></div>
+      </div>
+
+      <div class="stageDetailsGrid">
+        <div class="miniFeature">
+          <div class="miniFeatureLabel">This step is doing</div>
+          <div id="stageExplain" class="small">等待一条请求，或点击示例开始。</div>
+        </div>
+        <div class="miniFeature">
+          <div class="miniFeatureLabel">Checks in progress</div>
+          <ul id="stageChecks" class="small stageList"></ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="demoGrid3">
+      <section class="card">
+        <h2>1）Spend Request（支出请求）</h2>
+        <p class="kicker">
+          这个 Demo <b>不会真实付款</b>。你可以先从示例场景开始，也可以直接编辑 JSON。
+        </p>
+
+        <textarea id="req" class="demoTextArea mono" spellcheck="false"></textarea>
+
+        <div class="details">
+          <div class="pillrow" style="margin-top:0">
+            <span class="pill">模拟参数</span>
+            <label class="pill pillInput">
+              当月已花 <input id="spent" type="number" min="0" step="10" value="0" /> USD
+            </label>
+            <label class="pill pillInput">
+              当月总预算 <input id="cap" type="number" min="0" step="100" value="5000" /> USD
+            </label>
+          </div>
+          <div class="detailsBody small">
+            你可以把“当月已花”调大，来触发“超预算拒绝”。
+          </div>
+        </div>
+
+        <button id="btnEval" class="btn demoBtn">评估这条请求</button>
+        <div class="small">这里展示的是“由目标生成的支出请求”，不是最终付款动作。</div>
+      </section>
+
+      <section class="card">
+        <h2>2）Decision（策略判定）</h2>
+        <p class="kicker">策略引擎会给出：通过 / 需要人工审批 / 拒绝 / 冻结（异常）。</p>
+
+        <div id="decision" class="badge mono">—</div>
+
+        <div class="details">
+          <div class="mono small"><b>Reasons</b></div>
+          <div class="detailsBody">
+            <ul id="reasons" class="small stageList"></ul>
+          </div>
+        </div>
+
+        <div class="details">
+          <div class="mono small"><b>Next steps</b></div>
+          <div class="detailsBody">
+            <ul id="next" class="small stageList"></ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2>3）Ledger Preview（账本预览）</h2>
+        <p class="kicker">最终输出会被写成一个账本条目预览，用于审计与月度复盘。</p>
+        <pre id="ledger" class="demoPre mono">{}</pre>
+      </section>
+    </section>
+
+    <section class="card" style="margin-top:18px;">
+      <h2>这套 Demo 重点想说明什么？</h2>
+      <ul>
+        <li><b>不是付款能力</b>：重点不在“支付成功”，而在“这笔钱为什么值得花”。</li>
+        <li><b>不是自由消费</b>：所有请求都要经过预算、权限和风险检查。</li>
+        <li><b>不是黑箱决策</b>：系统要明确说明“谁在做什么检查、为什么通过或拒绝”。</li>
+        <li><b>不是只讲概念</b>：每次评估都会生成一个可追溯的账本条目。</li>
+      </ul>
+      <div class="note">
+        <b>说明：</b>这里的阈值、白名单和风控规则都是示例策略，用于展示结构。
+        真实部署时，应根据任务风险、预算规模与合规要求进行配置，并引入人工审批/多签等机制。
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container small">© <span id="y"></span> Jarvis Worker · Demo (static)</div>
+  </footer>
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

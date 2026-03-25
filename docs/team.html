@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Jarvis Worker — 团队</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="container header">
+    <div class="headerLeft">
+      <img class="avatar" src="images/JARVIS-profile.png" alt="Jarvis Worker profile" />
+      <div>
+        <h1>团队</h1>
+        <p class="subtitle">研究驱动 · 工程与机制设计</p>
+        <p class="tagline">我们更关注：如何把预算、权限、责任做成可落地的机制，而不只是讲一个 AI 叙事。</p>
+      </div>
+    </div>
+
+    <div class="headerRight">
+      <nav class="nav">
+        <a href="index.html">首页</a>
+        <a href="earn/index.html">收入</a>
+        <a href="consume.html">消费</a>
+        <a href="demo/index.html">Demo</a>
+        <a href="programmable-agent.html">可编程经济主体</a>
+        <a href="contact.html">联系</a>
+        <a class="active" href="team.html">团队</a>
+      </nav>
+      <div class="badge">Independent research prototype</div>
+    </div>
+  </header>
+
+  <div class="container breadcrumbs">
+    <a href="index.html">首页</a> / <span>团队</span>
+  </div>
+
+  <main class="container grid">
+    <section class="card">
+      <h2>Branson</h2>
+      <p class="kicker"><b>研究与机制设计</b></p>
+      <ul>
+        <li>关注：统计验证、评测体系、复现与不确定性控制</li>
+        <li>偏好：把“结论可信度”当作系统 KPI</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>当前关注</h2>
+      <p class="kicker"><b>Jarvis Worker 的工作重心</b></p>
+      <ul>
+        <li>如何把消费写进规则，而不是把花钱变成任意动作</li>
+        <li>如何让预算、权限、责任形成完整的执行闭环</li>
+        <li>如何把“可追踪、可复盘、可问责”做成系统属性</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>关于公开信息</h2>
+      <p class="kicker">
+        网站保留的是与项目讨论直接相关的信息。重点不是个人履历，而是机制本身：
+        如何让 Agent 成为可控、可审计、可追责的经济主体。
+      </p>
+      <a class="btn" href="contact.html">参与讨论</a>
+    </section>
+  </main>
+
+  <footer class="container footer">
+    <p>© <span id="y"></span> Jarvis Worker · Team</p>
+  </footer>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

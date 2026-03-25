@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Jarvis Worker — 消费</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="container header">
+    <div class="headerLeft">
+      <img class="avatar" src="images/JARVIS-profile.png" alt="Jarvis Worker profile" />
+      <div>
+        <h1>消费</h1>
+        <p class="subtitle">Jarvis Worker 如何“花钱”参与经济体</p>
+        <p class="tagline">消费不是爽点，而是再生产：每一笔支出都需要回答“它是否提高了结论/交付的可信度与可复现性？”</p>
+      </div>
+    </div>
+
+    <div class="headerRight">
+      <nav class="nav">
+        <a href="index.html">首页</a>
+        <a href="earn/index.html">收入</a>
+        <a class="active" href="consume.html">消费</a>
+        <a href="demo/index.html">Demo</a>
+        <a href="programmable-agent.html">可编程经济主体</a>
+        <a href="contact.html">联系</a>
+        <a href="team.html">团队</a>
+      </nav>
+      <div class="badge">Spend → Reinforce → Audit</div>
+    </div>
+  </header>
+
+  <div class="container breadcrumbs">
+    <a href="index.html">首页</a> / <span>消费</span>
+  </div>
+
+  <main class="container grid">
+    <section class="card">
+      <h2>为什么要强调 Agent 的消费？</h2>
+      <p class="kicker">
+        如果 Agent 只产出、不支出，它对经济的影响很容易停留在“供给侧提效”。
+        但当它在规则约束下稳定支出（算力、工具、质检、审计、再训练、公益等），
+        它就会成为需求侧的一部分，并把现金流打回产业链。
+      </p>
+      <div class="note">
+        关键不在于“花得多”，而在于“花得可控、可审计、可复盘”。
+      </div>
+      <p>
+        <a class="btn" href="demo/index.html">打开 Demo：消费决策引擎</a>
+      </p>
+      <p class="small">注：Demo 不会真的付款，只演示“预算/权限/责任”三道闸与账本记录。</p>
+    </section>
+
+    <section class="card">
+      <h2>四类核心消费</h2>
+      <ul>
+        <li><b>算力与实验预算（Compute as Evidence）：</b>多种子复跑、对照组、稳健性检查、复现实验。</li>
+        <li><b>工具链与数据订阅（Tooling as Control）：</b>实验追踪、版本锁定、指标口径校验、数据质量检测。</li>
+        <li><b>质检与审计（QA/Review as Insurance）：</b>关键结论抽检、独立复跑、统计检验复查、代码/数据泄露扫描。</li>
+        <li><b>知识资产再投资（Knowledge as Compounding）：</b>验证模板、负结果库、坑点库、基线与评测套件。</li>
+      </ul>
+      <div class="quote">
+        如果 Jarvis Worker 的“工作”是交付可验收的结论，那么它的“消费”就是为确定性买单。
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>公益捐赠：把善意写进现金流规则里</h2>
+      <p class="kicker">
+        我们设想把一部分收益变成“可审计的公益再分配”。
+        这不是情怀式捐款，而是工程化规则：可追踪、可回执、可冻结。
+      </p>
+      <ul>
+        <li><b>公益提取率（Charity Take Rate）：</b>从利润中固定比例划拨；低现金流时期自动降档或暂停。</li>
+        <li><b>用途标签（Purpose Tags）：</b>助学、医疗救助、灾害应急、无障碍服务等。</li>
+        <li><b>可审计（Auditability）：</b>为什么捐、捐给谁、对应哪类目标、回执是否完成。</li>
+        <li><b>反滥用（Anti-abuse）：</b>异常触发冻结出账，只允许人工审批。</li>
+      </ul>
+      <p class="small">注：具体合作机构/项目清单可在运营阶段逐步公开与维护。</p>
+    </section>
+
+    <section class="card">
+      <h2>网友如何给消费建议？</h2>
+      <p class="kicker">欢迎你对以下内容给出建议：</p>
+      <ul>
+        <li>建议支持的慈善机构 / 公益项目（含理由与可审计路径）</li>
+        <li>建议的消费优先级：算力 vs 质检 vs 复现保证金</li>
+        <li>你认为需要加入的风控/权限约束（防失控机制）</li>
+      </ul>
+      <p>
+        你可以直接发邮件到：
+        <a class="mono" href="mailto:jarvistheworkingclass@gmail.com">jarvistheworkingclass@gmail.com</a>
+        ，或进入 <a href="contact.html">联系页面</a> 查看讨论范围说明。
+      </p>
+      <div class="note">
+        为了减少误导与合规风险，我们默认把所有交流定位为“学术/政策讨论”。
+      </div>
+    </section>
+  </main>
+
+  <footer class="container footer">
+    <p>© <span id="y"></span> Jarvis Worker · Spending & participation</p>
+  </footer>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
