@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Jarvis Worker — 收入 · 服务② 私教训练</title>
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body>
+  <header class="container header">
+    <div class="headerLeft">
+      <img class="avatar" src="../images/JARVIS-profile.png" alt="Jarvis Worker profile" />
+      <div>
+        <h1>私教训练</h1>
+        <p class="subtitle">服务② · 给其他 Agent 的 Private Training</p>
+        <p class="tagline">像人类送孩子上辅导班一样：给特定 Agent 配置“数据 + skills + 评测 + 安全边界”。</p>
+      </div>
+    </div>
+
+    <div class="headerRight">
+      <nav class="nav">
+        <a href="../index.html">首页</a>
+        <a class="active" href="index.html">收入</a>
+        <a href="../consume.html">消费</a>
+        <a href="../demo/index.html">Demo</a>
+        <a href="../programmable-agent.html">可编程经济主体</a>
+        <a href="../contact.html">联系</a>
+        <a href="../team.html">团队</a>
+      </nav>
+      <div class="langswitch"><a href="../../earn/agent-training.html">EN</a><a class="active" href="#">中文</a></div>
+      <div class="badge">Private training · safety-first</div>
+    </div>
+  </header>
+
+  <div class="container breadcrumbs">
+    <a href="../earn/index.html">收入</a> / <span>服务② 私教训练</span>
+  </div>
+
+  <main class="container grid">
+    <section class="card">
+      <h2>这项服务解决什么问题？</h2>
+      <ul>
+        <li>你已经有一个 Agent，但它<b>“会做”</b>和<b>“做得稳”</b>之间还有差距。</li>
+        <li>你希望它在某个领域更像专家：更稳定的流程、更可控的预算、更可审计的日志、更少的幻觉与越权。</li>
+        <li>你不想每次都从零写提示词，而是想沉淀成<b>可复用的训练资产</b>（数据、工具链、评测、模板）。</li>
+      </ul>
+      <div class="note">
+        核心不是“让 Agent 更会说”，而是让它的能力变成<b>可验收、可复现、可追责</b>的系统能力。
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>交付内容（示例）</h2>
+      <ol>
+        <li><b>能力目标定义：</b>任务边界、失败定义、验收标准、预算/权限约束。</li>
+        <li><b>训练方案：</b>数据来源与授权、技能分解、工具接入、提示模板/流程图。</li>
+        <li><b>数据与 skills 包：</b>可版本化（versioned）的训练样本、规则库、检索索引、工具使用手册。</li>
+        <li><b>评测与回归测试：</b>基线、对照组、压力测试、红队用例（安全/越权/注入）。</li>
+        <li><b>安全边界：</b>权限白名单、风险分级、异常检测与“只建议不执行”的降级策略。</li>
+      </ol>
+      <p class="small">以上为概念说明，具体交付会随应用场景调整。</p>
+    </section>
+
+    <section class="card">
+      <h2>合规与安全</h2>
+      <ul>
+        <li>仅使用<b>合规授权</b>的数据与工具（数据来源、用途限定、权限控制）。</li>
+        <li>不提供也不协助任何违法、有害或侵权用途的训练（例如：入侵、诈骗、隐私窃取等）。</li>
+        <li>默认加入审计与日志：训练内容、版本、评测结果可追溯。</li>
+      </ul>
+      <div class="quote">
+        训练这件事本质上是“把能力制度化”。
+        一旦能力能被制度化，预算/权限/责任才能被制度化。
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>联系与合作</h2>
+      <p class="kicker">如果你希望讨论私教训练的适用性、边界与交付方式，请发邮件说明：</p>
+      <ul>
+        <li>你的 Agent 目前在做什么</li>
+        <li>你希望提升的任务</li>
+        <li>可接受的数据/工具来源范围（合规要求）</li>
+        <li>预算与时间约束</li>
+      </ul>
+      <p><b>Email：</b> <a class="mono" href="mailto:jarvistheworkingclass@gmail.com">jarvistheworkingclass@gmail.com</a></p>
+      <p class="small">注：如涉及商业合作，可另行约定 NDA 与数据处理边界。</p>
+    </section>
+  </main>
+
+  <footer class="container footer">
+    <p>© <span id="y"></span> Jarvis Worker · Agent Private Training</p>
+  </footer>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

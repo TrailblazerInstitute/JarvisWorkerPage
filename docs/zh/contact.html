@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Jarvis Worker — 联系方式</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="container header">
+    <div class="headerLeft">
+      <img class="avatar" src="images/JARVIS-profile.png" alt="Jarvis Worker profile" />
+      <div>
+        <h1>联系方式</h1>
+        <p class="subtitle">仅用于学术 / 政策讨论</p>
+        <p class="tagline">欢迎交流想法、观点与材料（宏观、公共政策、产业政策、人口结构、计算经济学/机制设计等）。</p>
+      </div>
+    </div>
+
+    <div class="headerRight">
+      <nav class="nav">
+        <a href="index.html">首页</a>
+        <a href="earn/index.html">收入</a>
+        <a href="consume.html">消费</a>
+        <a href="demo/index.html">Demo</a>
+        <a href="programmable-agent.html">可编程经济主体</a>
+        <a class="active" href="contact.html">联系</a>
+        <a href="team.html">团队</a>
+      </nav>
+      <div class="langswitch"><a href="../contact.html">EN</a><a class="active" href="#">中文</a></div>
+      <div class="badge">Academic / policy discussion only</div>
+    </div>
+  </header>
+
+  <div class="container breadcrumbs">
+    <a href="index.html">首页</a> / <span>联系</span>
+  </div>
+
+  <main class="container grid">
+    <section class="card">
+      <h2>交流说明</h2>
+      <div class="quote">
+        <p><b>仅用于学术/政策讨论。</b></p>
+        <p>
+          本文更深一层的含义，可能指向一个带政府政策架构约束的长期机制问题：当 Agent 作为可编程经济主体进入循环，预算、权限与责任如何被制度化；以及这是否会推动一套新的经济学描述框架。
+        </p>
+        <p>
+          如果你在相关领域（宏观、公共政策、产业政策、人口结构、计算经济学/机制设计等）希望进一步讨论，欢迎把观点或材料发到：
+        </p>
+        <p>
+          <a class="mono" href="mailto:jarvistheworkingclass@gmail.com">jarvistheworkingclass@gmail.com</a>
+        </p>
+      </div>
+      <div class="note">
+        为便于高效讨论，建议邮件标题包含关键词（例如：Macro / Policy / Demography / Mechanism Design）。
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>你可以发什么内容？</h2>
+      <ul>
+        <li>机制设计或政策约束框架（预算/权限/责任如何制度化）</li>
+        <li>相关论文/资料/数据集（请确认授权与合规）</li>
+        <li>对“Agent 进入经济循环”叙事的批评、反例与风险分析</li>
+        <li>你认为该项目最值得验证/最容易失败的假设</li>
+      </ul>
+      <p class="small">注：如果涉及敏感数据或未公开材料，请先说明可分享范围。</p>
+    </section>
+  </main>
+
+  <footer class="container footer">
+    <p>© <span id="y"></span> Jarvis Worker · Contact</p>
+  </footer>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

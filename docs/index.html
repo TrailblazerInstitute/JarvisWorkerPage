@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Jarvis Worker — Programmable Economic Agent</title>
+  <link rel="stylesheet" href="styles.css" />
+  
+</head>
+<body>
+  <header class="container header">
+    <div class="headerLeft">
+      <img class="avatar" src="images/JARVIS-profile.png" alt="Jarvis Worker profile" />
+      <div>
+        <h1>Jarvis Worker</h1>
+        <p class="subtitle">OpenClaw-based agent · programmable economic agent prototype</p>
+        <p class="tagline">We are not building another “AI helps you make money” tool. We are exploring a different product direction: teaching an agent how to spend inside boundaries of budget, permission, and accountability — and to participate in the economic cycle.</p>
+      </div>
+    </div>
+    <div class="headerRight">
+      <nav class="nav">
+        <a class="active" href="index.html">Home</a>
+        <a href="earn/index.html">Revenue</a>
+        <a href="consume.html">Spending</a>
+        <a href="demo/index.html">Demo</a>
+        <a href="programmable-agent.html">Programmable Agent</a>
+        <a href="contact.html">Contact</a>
+        <a href="team.html">Team</a>
+      </nav>
+      <div class="langswitch"><a class="active" href="index.html">EN</a><a href="zh/index.html">中文</a></div>
+      <div class="badge">Spend Request → Policy → Decision → Ledger</div>
+    </div>
+  </header>
+  <div class="container breadcrumbs"><a href="index.html">Home</a> / <span>Overview</span></div>
+  <main class="container grid gridHomeV8">
+    <section class="card heroCardWide">
+      <div class="heroIntroGrid">
+        <div>
+          <h2>What is this, exactly?</h2>
+          <p class="kicker">
+            Jarvis Worker is not a shopping bot. It is closer to a <b>wallet firewall + CFO + audit ledger</b> for agents:
+            define the rules first, allow spending second, and require evidence afterwards.
+          </p>
+        </div>
+        <div class="note compactNote">
+          <b>One-line positioning:</b><br />
+          Give an agent spending power under clear rules,
+          so it can move from being “just a producer” to becoming a managed economic actor.
+        </div>
+      </div>
+      <div class="miniFeatureGrid">
+        <div class="miniFeature">
+          <div class="miniFeatureLabel">1. Define the spending goal</div>
+          <div class="small">Why is this money being spent? Which deliverable does it support? What should improve if it is approved?</div>
+        </div>
+        <div class="miniFeature">
+          <div class="miniFeatureLabel">2. Run rule checks</div>
+          <div class="small">Budget caps, category allowlists, risk level, human-approval thresholds, and freeze rules.</div>
+        </div>
+        <div class="miniFeature">
+          <div class="miniFeatureLabel">3. Write it into a ledger</div>
+          <div class="small">Every approved request leaves behind a reason, a target, evidence, and a path for later review.</div>
+        </div>
+      </div>
+      <div class="actionRow">
+        <a class="btn" href="demo/index.html">Open the demo</a>
+        <a class="btn ghostBtn" href="consume.html">See the spending design</a>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Why start with spending?</h2>
+      <p class="kicker">
+        Most AI narratives stop at the supply side: faster work, lower cost, fewer people. But if an agent only produces and never spends,
+        it still behaves mostly like a tool. Once it can spend steadily, controllably, and accountably, the loop becomes economic.
+      </p>
+      <ul>
+        <li><b>An agent that only earns</b> mainly changes supply-side efficiency.</li>
+        <li><b>An agent that also spends</b> can start feeding money back into tools, services, quality control, human time, and charitable uses.</li>
+        <li>But this only works if spending is constrained by rules rather than left to open-ended autonomy.</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>Not “automatic payment”, but institutionalized spending</h2>
+      <p class="kicker">
+        The core problem is not a payment button. It is how money moves inside boundaries. That is why the product is built around three layers:
+      </p>
+      <ul>
+        <li><b>Budget gate:</b> total budget, per-transaction caps, bucket allocation, and risk budgets.</li>
+        <li><b>Permission gate:</b> vendor allowlists, category allowlists, and human-in-the-loop for sensitive actions.</li>
+        <li><b>Accountability gate:</b> every spend request must record its reason, linked deliverable, expected effect, and audit trail.</li>
+      </ul>
+      <div class="quote">The point is not “what the agent bought”, but “how the agent was allowed to spend at all”.</div>
+    </section>
+
+    <section class="card wideCard">
+      <h2>Minimal demo: begin with a scenario, then show execution</h2>
+      <p class="kicker">
+        In the demo, we do not start with “payment succeeded”. We start with a concrete goal:
+        <b>Jarvis is preparing a research or consulting deliverable and wants to spend a small amount on a service that improves reproducibility or reliability.</b>
+      </p>
+      <div class="miniFeatureGrid">
+        <div class="miniFeature">
+          <div class="miniFeatureLabel">User goal</div>
+          <div class="small">Examples: buy a tooling subscription, pay for a human reviewer, or trigger a quality-control expense.</div>
+        </div>
+        <div class="miniFeature">
+          <div class="miniFeatureLabel">Which workers are involved</div>
+          <div class="small">Planner → Policy Worker → Risk Worker → Ledger Worker.</div>
+        </div>
+        <div class="miniFeature">
+          <div class="miniFeatureLabel">System output</div>
+          <div class="small">A policy decision, reasons, next steps, and a ledger preview.</div>
+        </div>
+      </div>
+      <p class="small" style="margin-top:12px;">In other words, the demo shows a full line: <b>Spend Request → Policy Check → Decision → Ledger</b>.</p>
+      <div class="actionRow">
+        <a class="btn" href="demo/index.html">Open the interactive demo</a>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Where this system makes sense first</h2>
+      <ul>
+        <li><b>Reliability spending:</b> reviews, audits, reruns, reproducibility checks, and human oversight.</li>
+        <li><b>Human-service spending:</b> buying human time in a transition economy, not only more compute.</li>
+        <li><b>Small auditable donations:</b> attaching purpose tags, receipt requirements, and freeze rules to charitable spending.</li>
+        <li><b>Longer term:</b> using agents as tagged-budget executors where money exists on paper but services still do not happen.</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>Where to start</h2>
+      <ul>
+        <li><a href="demo/index.html"><b>Demo</b></a>: the shortest path to understanding what this product category is trying to show.</li>
+        <li><a href="consume.html"><b>Spending</b></a>: budget buckets, purpose tags, charitable logic, and reinvestment.</li>
+        <li><a href="earn/index.html"><b>Revenue</b></a>: how value delivery can become cash flow.</li>
+        <li><a href="programmable-agent.html"><b>Programmable Agent</b></a>: the longer-horizon policy and mechanism questions.</li>
+      </ul>
+      <p class="small">This site is a research prototype and a product-positioning document, not a commercial promise.</p>
+    </section>
+  </main>
+  <footer class="container footer">
+    <p>© <span id="y"></span> Jarvis Worker · Programmable economic agent prototype</p>
+  </footer>
+  <script>document.getElementById("y").textContent = new Date().getFullYear();</script>
+</body>
+</html>

@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Jarvis Worker — Demo</title>
+  <link rel="stylesheet" href="../styles.css" />
+  <script src="demo.js" defer></script>
+</head>
+<body>
+  <header class="container header">
+    <div class="headerLeft">
+      <img class="avatar" src="../images/JARVIS-profile.png" alt="Jarvis Worker profile" />
+      <div>
+        <h1>Jarvis Worker</h1>
+        <p class="subtitle">OpenClaw-based agent · programmable economic agent prototype</p>
+        <p class="tagline">This demo does not execute real payments. It shows how a spending request moves through budget, permission, and accountability gates.</p>
+      </div>
+    </div>
+    <div class="headerRight">
+      <nav class="nav">
+        <a href="../index.html">Home</a>
+        <a href="../earn/index.html">Revenue</a>
+        <a href="../consume.html">Spending</a>
+        <a class="active" href="index.html">Demo</a>
+        <a href="../programmable-agent.html">Programmable Agent</a>
+        <a href="../contact.html">Contact</a>
+        <a href="../team.html">Team</a>
+      </nav>
+      <div class="langswitch"><a class="active" href="index.html">EN</a><a href="../zh/demo/index.html">中文</a></div>
+      <div class="badge">Goal → Workers → Decision → Ledger</div>
+    </div>
+  </header>
+  <div class="container breadcrumbs"><a href="../index.html">Home</a> / <span>Demo</span></div>
+  <main class="container">
+    <section class="card scenarioCard">
+      <div class="scenarioHeader">
+        <div>
+          <h2>What scenario does this demo show?</h2>
+          <p class="kicker">Start from a concrete goal, then watch the system lock the request inside boundaries of budget, permission, and accountability.</p>
+        </div>
+        <div class="pillrow demoPills">
+          <span class="pill">Use cases</span>
+          <button class="pill pillbtn" data-example="tooling">Tooling</button>
+          <button class="pill pillbtn" data-example="reliability">Human review</button>
+          <button class="pill pillbtn" data-example="charity">Charity</button>
+          <button class="pill pillbtn" data-example="suspicious">Suspicious request</button>
+        </div>
+      </div>
+      <div class="scenarioGrid">
+        <div class="miniFeature">
+          <div class="miniFeatureLabel">What the user wants to accomplish</div>
+          <div id="scenarioGoal" class="small"></div>
+        </div>
+        <div class="miniFeature">
+          <div class="miniFeatureLabel">Which workers are involved</div>
+          <div id="scenarioWorkers" class="small"></div>
+        </div>
+        <div class="miniFeature">
+          <div class="miniFeatureLabel">What the system will produce</div>
+          <div id="scenarioOutput" class="small"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="card stageCard">
+      <div class="stageTop">
+        <div>
+          <h2>Execution flow</h2>
+          <p class="kicker">To make multi-worker collaboration easier to follow, the process is split into four fixed stages.</p>
+        </div>
+        <div class="statusPanel">
+          <div class="small"><b>Current stage</b>: <span id="currentStage">Ready</span></div>
+          <div class="small"><b>Current worker</b>: <span id="currentWorker">—</span></div>
+        </div>
+      </div>
+      <div class="stepper" id="stepper">
+        <div class="step active" data-step="planning"><span class="stepDot"></span><span>Planning</span></div>
+        <div class="step" data-step="policy"><span class="stepDot"></span><span>Policy check</span></div>
+        <div class="step" data-step="risk"><span class="stepDot"></span><span>Risk review</span></div>
+        <div class="step" data-step="ledger"><span class="stepDot"></span><span>Ledger write</span></div>
+      </div>
+      <div class="stageDetailsGrid">
+        <div class="miniFeature">
+          <div class="miniFeatureLabel">This step is doing</div>
+          <div id="stageExplain" class="small">Waiting for a spend request.</div>
+        </div>
+        <div class="miniFeature">
+          <div class="miniFeatureLabel">Checks in progress</div>
+          <ul id="stageChecks" class="small stageList"></ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="demoGrid3">
+      <section class="card">
+        <h2>1) Spend Request</h2>
+        <p class="kicker">This demo <b>does not make a real payment</b>. Start from an example or edit the JSON directly.</p>
+        <textarea id="req" class="demoTextArea mono" spellcheck="false"></textarea>
+        <div class="details">
+          <div class="pillrow" style="margin-top:0">
+            <span class="pill">Simulation parameters</span>
+            <label class="pill pillInput">Spent this month <input id="spent" type="number" min="0" step="10" value="0" /> USD</label>
+            <label class="pill pillInput">Monthly cap <input id="cap" type="number" min="0" step="100" value="5000" /> USD</label>
+          </div>
+          <div class="detailsBody small">Try increasing “spent this month” to trigger a budget rejection.</div>
+        </div>
+        <button id="btnEval" class="btn demoBtn">Evaluate this request</button>
+        <div class="small">What you see here is the request generated from a goal — not the final payment action.</div>
+      </section>
+
+      <section class="card">
+        <h2>2) Decision</h2>
+        <p class="kicker">The policy engine returns one of four outcomes: approve, human review, reject, or freeze.</p>
+        <div id="decision" class="badge mono">—</div>
+        <div class="details">
+          <div class="mono small"><b>Reasons</b></div>
+          <div class="detailsBody"><ul id="reasons" class="small stageList"></ul></div>
+        </div>
+        <div class="details">
+          <div class="mono small"><b>Next steps</b></div>
+          <div class="detailsBody"><ul id="next" class="small stageList"></ul></div>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2>3) Ledger Preview</h2>
+        <p class="kicker">The final output is written as a ledger preview for audit and later review.</p>
+        <pre id="ledger" class="demoPre mono">{}</pre>
+      </section>
+    </section>
+
+    <section class="card" style="margin-top:18px;">
+      <h2>What is this demo really trying to show?</h2>
+      <ul>
+        <li><b>Not payment power:</b> the point is not “payment succeeded”, but “why should this spend be allowed at all?”</li>
+        <li><b>Not free-form consumption:</b> every request passes through budget, permission, and risk checks.</li>
+        <li><b>Not black-box judgment:</b> the system shows which worker is acting and why the request was approved, rejected, or frozen.</li>
+        <li><b>Not only concepts:</b> every evaluation produces a traceable ledger entry.</li>
+      </ul>
+      <div class="note"><b>Note:</b> the thresholds, allowlists, and risk rules here are example policies for demonstration only. Real deployment would need to reflect compliance rules, budget size, task risk, and human approval or multi-signature requirements.</div>
+    </section>
+  </main>
+  <footer class="container footer">
+    <p>© <span id="y"></span> Jarvis Worker · Demo (static)</p>
+  </footer>
+  <script>document.getElementById("y").textContent = new Date().getFullYear();</script>
+</body>
+</html>

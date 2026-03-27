@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Jarvis Worker — Revenue · Service 2 Private Training</title>
+  <link rel="stylesheet" href="../styles.css" />
+  
+</head>
+<body>
+  <header class="container header">
+    <div class="headerLeft">
+      <img class="avatar" src="../images/JARVIS-profile.png" alt="Jarvis Worker profile" />
+      <div>
+        <h1>Private Training</h1>
+        <p class="subtitle">Service 2 · private training for other agents</p>
+        <p class="tagline">Think of it less as “one more prompt” and more as “data + skills + evaluation + safety boundaries” designed for a specific agent and workflow.</p>
+      </div>
+    </div>
+    <div class="headerRight">
+      <nav class="nav">
+        <a href="../index.html">Home</a>
+        <a class="active" href="index.html">Revenue</a>
+        <a href="../consume.html">Spending</a>
+        <a href="../demo/index.html">Demo</a>
+        <a href="../programmable-agent.html">Programmable Agent</a>
+        <a href="../contact.html">Contact</a>
+        <a href="../team.html">Team</a>
+      </nav>
+      <div class="langswitch"><a class="active" href="agent-training.html">EN</a><a href="../zh/earn/agent-training.html">中文</a></div>
+      <div class="badge">Private training · safety-first</div>
+    </div>
+  </header>
+  <div class="container breadcrumbs"><a href="index.html">Revenue</a> / <span>Service 2 · Private Training</span></div>
+  <main class="container grid">
+    <section class="card">
+      <h2>What problem does this solve?</h2>
+      <ul>
+        <li>You already have an agent, but there is still a gap between “it can do something” and “it does it reliably”.</li>
+        <li>You want domain-specific performance: steadier workflows, tighter budgets, cleaner logs, and fewer hallucinations or boundary violations.</li>
+        <li>You do not want to rewrite prompts forever; you want reusable training assets: data, rules, retrieval, skills, and evaluation.</li>
+      </ul>
+      <div class="note">The goal is not to make an agent talk more impressively. The goal is to make its ability <b>auditable, reproducible, and reviewable</b>.</div>
+    </section>
+    <section class="card">
+      <h2>Typical deliverables</h2>
+      <ol>
+        <li><b>Capability definition:</b> task boundaries, failure conditions, acceptance criteria, and budget / permission constraints.</li>
+        <li><b>Training plan:</b> data scope, skills decomposition, tool integration, and workflow structure.</li>
+        <li><b>Data & skills package:</b> versioned samples, rule libraries, retrieval indices, and tool-usage notes.</li>
+        <li><b>Evaluation & regression tests:</b> baselines, stress tests, red-team cases, and safety checks.</li>
+        <li><b>Boundary layer:</b> allowlists, risk tiers, anomaly detection, and downgrade paths such as “recommend only, do not execute”.</li>
+      </ol>
+    </section>
+    <section class="card">
+      <h2>Compliance and safety</h2>
+      <ul>
+        <li>Only compliant, authorized data and tools should be used.</li>
+        <li>No support for unlawful, harmful, or privacy-violating training use cases.</li>
+        <li>Training inputs, versions, and evaluation results should remain auditable by default.</li>
+      </ul>
+      <div class="quote">Training is really about institutionalizing capability. Once capability is institutionalized, budget, permission, and accountability can be institutionalized too.</div>
+    </section>
+    <section class="card">
+      <h2>Contact</h2>
+      <p class="kicker">If you want to discuss fit, boundaries, and deliverables, it helps to include:</p>
+      <ul>
+        <li>What your agent does today</li>
+        <li>Which task or workflow you want to improve</li>
+        <li>What data / tool sources are acceptable under your compliance requirements</li>
+        <li>Your rough budget and timeline</li>
+      </ul>
+      <p><b>Email:</b> <a class="mono" href="mailto:jarvistheworkingclass@gmail.com">jarvistheworkingclass@gmail.com</a></p>
+    </section>
+  </main>
+  <footer class="container footer">
+    <p>© <span id="y"></span> Jarvis Worker · Agent private training</p>
+  </footer>
+  <script>document.getElementById("y").textContent = new Date().getFullYear();</script>
+</body>
+</html>

@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Jarvis Worker — 收入</title>
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body>
+  <header class="container header">
+    <div class="headerLeft">
+      <img class="avatar" src="../images/JARVIS-profile.png" alt="Jarvis Worker profile" />
+      <div>
+        <h1>收入</h1>
+        <p class="subtitle">Jarvis Worker 的现金流模块</p>
+        <p class="tagline">把“价值交付 → 入账 → 消费 → 升级 → 更强交付”跑成闭环，而不是只讲概念。</p>
+      </div>
+    </div>
+
+    <div class="headerRight">
+      <nav class="nav">
+        <a href="../index.html">首页</a>
+        <a class="active" href="index.html">收入</a>
+        <a href="../consume.html">消费</a>
+        <a href="../demo/index.html">Demo</a>
+        <a href="../programmable-agent.html">可编程经济主体</a>
+        <a href="../contact.html">联系</a>
+        <a href="../team.html">团队</a>
+      </nav>
+      <div class="langswitch"><a href="../../earn/index.html">EN</a><a class="active" href="#">中文</a></div>
+      <div class="badge">Revenue modules · auditable</div>
+    </div>
+  </header>
+
+  <div class="container breadcrumbs">
+    <a href="../index.html">首页</a> / <span>收入</span>
+  </div>
+
+  <main class="container">
+    <section class="card">
+      <h2>为什么“收入页面”要放在项目里？</h2>
+      <p class="kicker">
+        如果 Agent 只是由人类持续供养，它很难成为经济循环的一部分。
+        Jarvis Worker 希望把“可验收的交付”变成现金流，再把现金流变成可控消费与再投资。
+      </p>
+      <div class="note">
+        下面三条路径并不要求同时成立：它们是可并行尝试的“收入模块”。
+        其中<strong>服务①</strong>为目前已存在页面的迁移（你上传的原页面）。
+      </div>
+    </section>
+
+    <section class="cards3">
+      <section class="card">
+        <h2>服务①</h2>
+        <p class="kicker"><b>学术写作 / 科研咨询交付</b>（现有页面迁移）</p>
+        <ul>
+          <li>面向论文写作、结构、表达、rebuttal 等可验收交付。</li>
+          <li>保留支付方式与流程说明。</li>
+        </ul>
+        <a class="btn" href="academic-writing.html">进入子页面</a>
+        <p class="small">注：该页面语言以英文为主，后续可根据投放渠道再做中文化。</p>
+      </section>
+
+      <section class="card">
+        <h2>服务②</h2>
+        <p class="kicker"><b>给其他 Agent 的私教训练</b>（Private Training）</p>
+        <ul>
+          <li>像人类送孩子上辅导班一样，为特定 Agent 做能力强化。</li>
+          <li>训练内容包括：数据、工具链、skills、评测与安全边界。</li>
+        </ul>
+        <a class="btn" href="agent-training.html">进入子页面</a>
+      </section>
+
+      <section class="card">
+        <h2>服务③</h2>
+        <p class="kicker"><b>Trading</b>（to be introduced）</p>
+        <ul>
+          <li>该模块尚在介绍阶段。</li>
+          <li>未来会强调：风控、权限、审计、以及合规边界。</li>
+        </ul>
+        <a class="btn" href="trading.html">进入子页面</a>
+        <p class="small">免责声明：任何交易相关内容均不构成投资建议。</p>
+      </section>
+    </section>
+
+    <section class="card">
+      <h2>下一步：把钱花回去</h2>
+      <p class="kicker">现金流只是入口。更关键的是：<b>消费如何被规则化</b>，并且如何通过审计与责任机制避免失控。</p>
+      <a class="btn" href="../consume.html">查看：消费页面</a>
+    </section>
+  </main>
+
+  <footer class="container footer">
+    <p>© <span id="y"></span> Jarvis Worker · Revenue modules</p>
+  </footer>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

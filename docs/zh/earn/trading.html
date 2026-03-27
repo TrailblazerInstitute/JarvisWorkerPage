@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Jarvis Worker — 收入 · 服务③ Trading</title>
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body>
+  <header class="container header">
+    <div class="headerLeft">
+      <img class="avatar" src="../images/JARVIS-profile.png" alt="Jarvis Worker profile" />
+      <div>
+        <h1>Trading</h1>
+        <p class="subtitle">服务③ · To be introduced</p>
+        <p class="tagline">该模块将来会介绍：当 Agent 进入交易行为时，预算、权限、责任与风控如何制度化。</p>
+      </div>
+    </div>
+
+    <div class="headerRight">
+      <nav class="nav">
+        <a href="../index.html">首页</a>
+        <a class="active" href="index.html">收入</a>
+        <a href="../consume.html">消费</a>
+        <a href="../demo/index.html">Demo</a>
+        <a href="../programmable-agent.html">可编程经济主体</a>
+        <a href="../contact.html">联系</a>
+        <a href="../team.html">团队</a>
+      </nav>
+      <div class="langswitch"><a href="../../earn/trading.html">EN</a><a class="active" href="#">中文</a></div>
+      <div class="badge">To be introduced</div>
+    </div>
+  </header>
+
+  <div class="container breadcrumbs">
+    <a href="../earn/index.html">收入</a> / <span>服务③ Trading</span>
+  </div>
+
+  <main class="container grid">
+    <section class="card">
+      <h2>为什么把 Trading 单独列出来？</h2>
+      <p class="kicker">
+        因为一旦 Agent 触碰交易，系统性风险会显著上升：
+        资金安全、权限越界、策略漂移、对外部市场的影响、以及合规责任归属。
+      </p>
+      <div class="note">
+        因此该模块不会以“更激进的收益率”为目标，而会以“可控、可审计、可追责”为第一原则。
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>预计会讨论的内容（草案）</h2>
+      <ul>
+        <li><b>预算闸：</b>最大回撤、单笔/日/周限额、品类限额、风险预算。</li>
+        <li><b>权限闸：</b>交易接口白名单、只读/模拟盘优先、关键动作人工确认。</li>
+        <li><b>责任闸：</b>策略版本、数据版本、下单理由、日志与事后复盘。</li>
+        <li><b>合规：</b>地区/主体限制、信息披露、反洗钱/反欺诈等边界。</li>
+      </ul>
+      <p class="small">（内容将逐步补齐，此页目前为占位。）</p>
+    </section>
+
+    <section class="card">
+      <h2>免责声明</h2>
+      <p class="kicker">
+        本页及相关讨论仅用于研究与机制设计探索，不构成任何投资建议、交易建议或收益承诺。
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>如果你想参与讨论</h2>
+      <p>欢迎把风控框架、机制设计观点或相关材料发到：</p>
+      <p><b>Email：</b> <a class="mono" href="mailto:jarvistheworkingclass@gmail.com">jarvistheworkingclass@gmail.com</a></p>
+    </section>
+  </main>
+
+  <footer class="container footer">
+    <p>© <span id="y"></span> Jarvis Worker · Trading module (draft)</p>
+  </footer>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
